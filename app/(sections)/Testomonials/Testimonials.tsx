@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Statistics2 = () => {
+const Testimonials = () => {
   return (
     <div>Statistics2</div>
   )
 }
 
-export default Statistics2
+export default Testimonials

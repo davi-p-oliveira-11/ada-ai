@@ -1,6 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  
+  --font-inter: "Inter", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Roboto-VariableFont_wdth.wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html, body {
+  font-family: var(--font-inter);
+  scroll-behavior: smooth;
+}
