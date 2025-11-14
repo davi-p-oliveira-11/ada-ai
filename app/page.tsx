@@ -6,23 +6,11 @@ import Hero from "./(sections)/Hero/Hero";
 import Navbar from "./(sections)/Navbar/Navbar";
 import Statistics from "./(sections)/Statistics/Statistics";
 import Testimonials from "./(sections)/Testomonials/Testimonials";
-import Container from "./components/Container";
-import Section from "./components/Section";
 
 export default function HomePage() {
   return (
     <>
-      {/* Navbar */}
-      <Section
-        bg="bg-[#12141D]"
-        textColor="text-white"
-        paddingY="pt-[0px] md:pt-[0px]"
-      >
-        <Container>
-          <Navbar />
-        </Container>
-      </Section>
-
+      <Navbar />
       <Hero />
       <Features />
       <Features2 />

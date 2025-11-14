@@ -1,10 +1,9 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import Button from "@/app/components/Button";
+
 
 // Navbar.tsx (data section)
 interface LinkItem {
@@ -34,10 +33,10 @@ const navbarData: NavbarData = {
     alt: "Stract Mixland Logo",
   },
   links: [
-    { label: "Features", href: "#features" },
-    { label: "Solutions", href: "#solutions" },
-    { label: "Testimonials", href: "#testimonials" },
     { label: "Pricing", href: "#pricing" },
+    { label: "Platform", href: "#platform" },
+    { label: "Solutions", href: "#solutions" },
+    { label: "Resources", href: "#resources" },
   ],
   cta: {
     text: "Get Started",
@@ -56,20 +55,20 @@ export default function Navbar() {
           <Image
             src={navbarData.logo.src}
             alt={navbarData.logo.alt}
-            width={100}
-            height={30}
-            className="w-28 sm:w-32 md:w-36 h-auto"
+            width={74}
+            height={24}
+            className="w-[74px] h-6"
             priority
           />
         </Link>
 
         {/* Center Links */}
-        <ul className="hidden [@media(min-width:820px)]:flex space-x-10 text-base">
+        <ul className="hidden [@media(min-width:820px)]:flex space-x-10">
           {navbarData.links.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
-                className="font-inter hover:text-[#1668E8] hover:text-underline transition-colors duration-200"
+                className="text-white font-semibold text-[14px] md:text-[15px] transition-colors duration-200 hover:text-[#1668E8]"
               >
                 {link.label}
               </Link>
@@ -79,9 +78,9 @@ export default function Navbar() {
 
         {/* CTA Button */}
         <div className="hidden [@media(min-width:820px)]:block">
-          <Button variant="primary" size="md" fullWidth={false}>
+          <button className=" hidden[@media(min-width:820px)]:block bg-linear-to-r from-[#9977D4] to-[#6337AE] text-white font-semibold px-6 py-3 rounded-md transition duration-200 hover:opacity-90 cursor-pointer">
             {navbarData.cta.text}
-          </Button>
+          </button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -96,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="bg-[#12141D] [@media(min-width:820px)]:hidden">
+        <div className="bg-[#121212] [@media(min-width:820px)]:hidden">
           <ul className="flex flex-col items-center gap-4 py-6 text-sm">
             {navbarData.links.map((link) => (
               <li key={link.href}>
@@ -109,15 +108,9 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
-            <Button
-              variant="primary"
-              size="md"
-              className="mt-4"
-              fullWidth={false}
-              onClick={() => setMenuOpen(false)}
-            >
+            <button className=" hidden[@media(min-width:820px)]:block bg-linear-to-r from-[#9977D4] to-[#6337AE] text-white font-semibold px-6 py-3 rounded-md transition duration-200 hover:opacity-90 cursor-pointer">
               {navbarData.cta.text}
-            </Button>
+            </button>
           </ul>
         </div>
       )}
