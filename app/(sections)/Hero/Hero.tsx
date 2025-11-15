@@ -1,56 +1,85 @@
-"use client";
+import Image from "next/image";
 
-import Button from "@/app/components/Button";
-
-const Hero = () => {
-  type HeroContent = {
-    title: string;
-    subtitle: string;
-    ctaLabel: string;
-    videoLabel: string;
-  };
-
-  const heroContent: HeroContent = {
-    title: "Easy way to achieve customer satisfaction",
-    subtitle:
-      "Providing all customer service within one software. Our landing page template works on all devices and we have completely redesigned the project management experience.",
-    ctaLabel: "Let's Get Started",
-    videoLabel: "Watch our video",
-  };
-
+export default function Hero() {
   return (
-    <section className="bg-[#12141D] text-white py-16 sm:py-24">
-      <div className="max-w-[900px] mx-auto px-4 text-center">
-        <h1 
-          className="text-[36px] sm:text-[48px] md:text-[64px] lg:text-[80px] font-bold leading-tight"
-          style={{ fontFamily: "var(--font-space-grotesk)" }}
-          >
-          {heroContent.title}
+    <section className="w-full bg-white pt-20 pb-16 px-6 md:px-12">
+      <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
+
+        {/* H1 */}
+        <h1
+          className="
+            font-normal
+            text-[36px]
+            md:text-[48px]
+            lg:text-[58px]
+            leading-tight
+            text-gray-900
+          "
+        >
+          Your Hero Title Exactly From the Design
         </h1>
 
-        <p className="mt-6 text-[14px] sm:text-[16px] md:text-[20px] text-gray-400 leading-relaxed">
-          {heroContent.subtitle}
+        {/* Paragraph */}
+        <p
+          className="
+            mt-6
+            text-[16px]
+            md:text-[18px]
+            text-gray-600
+            max-w-[620px]
+          "
+        >
+          Your hero description or subtitle goes here. It should be centered,
+          readable, and scale properly on mobile and desktop.
         </p>
 
-        <div className="mt-10 flex justify-center items-center gap-6">
-          <Button
-            variant="primary"
-            fullWidth={false}
-            className="text-sm sm:text-base px-5 py-3 sm:px-6 sm:py-3 whitespace-nowrap"
+        {/* Buttons */}
+        <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          {/* Primary Gradient Button */}
+          <button
+            className="
+              bg-gradient-to-r
+              from-[#9977D4]
+              to-[#6337AE]
+              text-white
+              font-semibold
+              px-6
+              py-3
+              rounded-md
+              hover:opacity-90
+              transition
+            "
           >
-            {heroContent.ctaLabel}
-          </Button>
+            Get Started
+          </button>
 
-          <a
-            href="#"
-            className="text-sm sm:text-base text-gray-300 underline hover:text-white transition"
+          {/* Secondary Button */}
+          <button
+            className="
+              border
+              border-gray-300
+              text-gray-800
+              font-semibold
+              px-6
+              py-3
+              rounded-md
+              hover:bg-gray-100
+              transition
+            "
           >
-            {heroContent.videoLabel}
-          </a>
+            Learn More
+          </button>
         </div>
+
+        {/* Hero Image */}
+        <Image
+          src="/hero-image.png"  // replace with your asset
+          alt="Hero section illustration"
+          width={680}
+          height={520}
+          className="mt-12 w-full max-w-[680px] h-auto"
+        />
       </div>
     </section>
   );
-};
-
-export default Hero;
+}
