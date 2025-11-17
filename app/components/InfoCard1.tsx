@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 
 export type InfoCardType = {
-  type: "metric" | "logo";
+  type: string;
   number?: string;       
   text: string;
   logo?: string;        
