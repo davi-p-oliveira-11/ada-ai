@@ -46,7 +46,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="py-16 bg-[#121212]">
+    <footer className="py-16 bg-[#1B1E23]">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
@@ -55,8 +55,8 @@ const Footer = () => {
             <Image
               src="/images/logo.svg"
               alt="Logo"
-              width={120}
-              height={40}
+              width={74}
+              height={24}
               className="mb-4"
             />
             <p className="text-gray-300 text-sm leading-relaxed max-w-[250px]">
@@ -67,7 +67,7 @@ const Footer = () => {
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className="text-lg font-semibold mb-4">{section.title}</h4>
+              <h4 className="text-lg text-gray-300 font-semibold mb-4">{section.title}</h4>
               <ul className="space-y-3 text-gray-300 text-sm">
                 {section.links.map((link) => (
                   <li key={link}>
