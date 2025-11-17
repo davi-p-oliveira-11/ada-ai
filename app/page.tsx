@@ -5,7 +5,7 @@ import Footer from "./(sections)/Footer/Footer";
 import Hero from "./(sections)/Hero/Hero";
 import Navbar from "./(sections)/Navbar/Navbar";
 import Statistics from "./(sections)/Statistics/Statistics";
-import Testimonials from "./(sections)/Testomonials/Testimonials";
+import Testimonials from "./(sections)/Testomonials/StatsShowcaseSection";
 
 export default function HomePage() {
   return (
