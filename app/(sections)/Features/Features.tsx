@@ -12,6 +12,35 @@ const Features = () => {
                inquiries in record time.`,
   };
 
+  const features = [
+    {
+      type: "speed",
+      icon: "⚡",
+      title: "High Performance",
+      description:
+        "Experience blazing fast load times and smooth interactions.",
+    },
+    {
+      type: "security",
+      icon: "🔐",
+      title: "Secure by Design",
+      description:
+        "Your data stays protected with enterprise-grade encryption.",
+    },
+    {
+      type: "automation",
+      icon: "⚙️",
+      title: "Smart Automation",
+      description: "Automate repetitive tasks and boost your productivity.",
+    },
+    {
+      type: "support",
+      icon: "💬",
+      title: "24/7 Support",
+      description: "Our team is here to help you anytime, anywhere.",
+    },
+  ];
+
   return (
     <section className="bg-[#1B1E23] py-12 md:py-20">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
@@ -51,6 +80,18 @@ const Features = () => {
             height={560}
             className="w-full h-auto object-contain"
           />
+        </div>
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 place-items-center">
+          {features.map((f) => (
+            <div
+              key={f.type}
+              className="w-[277px] h-[192px] bg-[#121212] text-white rounded-2xl flex flex-col items-center justify-center text-center p-4"
+            >
+              <div className="text-4xl mb-3">{f.icon}</div>
+              <h4 className="text-lg font-semibold">{f.title}</h4>
+              <p className="text-sm opacity-80 mt-1">{f.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
