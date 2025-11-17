@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { StatItem } from "@/types/stats";
+import { StatItem } from "../(sections)/Testomonials/StatsShowcaseSection";
 
 export default function LargeStatCard({ stats }: { stats: StatItem[] }) {
   return (

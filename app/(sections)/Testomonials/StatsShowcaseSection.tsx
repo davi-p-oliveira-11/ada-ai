@@ -1,6 +1,11 @@
 import LargeStatCard from "@/app/components/LargeStatCard";
 import SmallStatCard from "@/app/components/SmallStatCard";
 
+export type StatItem = {
+  number: string;
+  label: string;
+}
+
 const statsData = [
   { number: "24%", label: "Increase in retention" },
   { number: "12M+", label: "Conversations automated" },
