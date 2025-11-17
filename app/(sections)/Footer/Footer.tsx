@@ -60,14 +60,17 @@ const Footer = () => {
               className="mb-4"
             />
             <p className="text-gray-300 text-sm leading-relaxed max-w-[250px]">
-              Build stunning landing pages faster with our modern templates.
+              Ada AI is an advanced customer experience automation
+              platform that helps companies streamline support.
             </p>
           </div>
 
           {/* Footer Sections */}
           {footerSections.map((section) => (
             <div key={section.title}>
-              <h4 className="text-lg text-gray-300 font-semibold mb-4">{section.title}</h4>
+              <h4 className="text-lg text-gray-300 font-semibold mb-4">
+                {section.title}
+              </h4>
               <ul className="space-y-3 text-gray-300 text-sm">
                 {section.links.map((link) => (
                   <li key={link}>
