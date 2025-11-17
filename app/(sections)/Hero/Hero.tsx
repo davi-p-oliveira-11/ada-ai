@@ -17,7 +17,7 @@ export default function Hero() {
 
     <section className="w-full bg-[#1B1E23] pt-40 pb-16 px-6 md:px-12">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        <h1 className="font-(--font-roboto) text-center text-[36px] md:text-[48px] lg:text-[58px] leading-tight text-white">
+        <h1 className="text-center text-[36px] md:text-[48px] lg:text-[58px] leading-tight text-white">
           {heroContent.title}
         </h1>
 

@@ -62,7 +62,7 @@ const Features = () => {
 
         {/* Buttons */}
         <div className="mt-8 flex flex-wrap gap-4">
-          <button className="px-6 py-3 text-sm sm:text-base bg-gradient-to-r from-[#9977D4] to-[#6337AE] text-white font-semibold rounded-lg cursor-pointer">
+          <button className="px-6 py-3 text-sm sm:text-base bg-linear-to-r from-[#9977D4] to-[#6337AE] text-white font-semibold rounded-lg cursor-pointer">
             See Ada in Action
           </button>
 
@@ -85,7 +85,7 @@ const Features = () => {
           {features.map((f) => (
             <div
               key={f.type}
-              className="w-[277px] h-[192px] bg-[#121212] text-white rounded-2xl flex flex-col items-center justify-center text-center p-4"
+              className="w-[277px] h-48 bg-[#121212] text-white rounded-2xl flex flex-col items-center justify-center text-center p-4"
             >
               <div className="text-4xl mb-3">{f.icon}</div>
               <h4 className="text-lg font-semibold">{f.title}</h4>

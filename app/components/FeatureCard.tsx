@@ -10,7 +10,7 @@ type FeatureCard = {
 
 export default function FeatureCard({ icon, title, description }: FeatureCard) {
   return (
-    <div className="bg-[#121212] w-full max-w-[277px] h-[192px] rounded-xl flex flex-col items-center justify-center text-center px-6">
+    <div className="bg-[#121212] w-full max-w-[277px] h-48 rounded-xl flex flex-col items-center justify-center text-center px-6">
       {/* Icon */}
       <div className="mb-4">
         <Image
